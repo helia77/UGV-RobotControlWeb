@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+
+<script type="text/javascript">
+  
+ SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+$(function() {
+    $('#butt_f').bind('click', function() {
+      $.getJSON(SCRIPT_ROOT + '/_forward')
+      return false;
+    });
+  });
+  
+$(function() {
+   $('#butt_b').bind('click', function() {
+      $.getJSON(SCRIPT_ROOT + '/_backward')
+      return false;
+    });
+  });
+  
+  $(function() {
+    $('#butt_l').bind('click', function() {
+      $.getJSON(SCRIPT_ROOT + '/_left')
+      return false;
+    });
+  });
+  
+  
+  $(function() {
+    $('#butt_r').bind('click', function() {
+      $.getJSON(SCRIPT_ROOT + '/_right')
+      return false;
+    });
+  });
+  
+  
+  $(function() {
+    $('#butt_S').bind('click', function() {
+      $.getJSON(SCRIPT_ROOT + '/_Stop')
+      return false;
+    });
+  });
+
+
+
+
+</script>
+
+
+<h1>Robot Controller</h1>
+<div> <input type="button" class="butt_f" value="F" id="butt_f"></input> 	</div>
+<div> <input type="button" class="butt_b" value="B" id="butt_b"></input> 	</div>
+<div> <input type="button" class="butt_S" value="S" id="butt_S"></input> 	</div>
+<div> <input type="button" class="butt_l" value="L" id="butt_l"></input> 	</div>
+<div> <input type="button" class="butt_r" value="R" id="butt_r"></input> 	</div>
+
+
+  </p>
+
+
+
+
+</body>
+</html>
